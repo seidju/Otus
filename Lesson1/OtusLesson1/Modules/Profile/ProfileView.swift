@@ -21,7 +21,7 @@ struct ProfileView: View {
             .navigationBarTitle(Text("Profile"))
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .sheet(isPresented: $isPresented) { FAQView() }
+        .sheet(isPresented: $isPresented) { FAQView(isPresented: self.$isPresented) }
     }
 }
 

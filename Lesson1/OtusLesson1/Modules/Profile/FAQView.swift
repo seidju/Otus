@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct FAQView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Binding var isPresented: Bool
 
     var body: some View {
         Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
+            self.isPresented = false
         }) {
             Text("CLOSE")
         }
